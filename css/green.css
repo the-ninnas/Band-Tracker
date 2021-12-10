@@ -1,0 +1,198 @@
+html {
+  box-sizing: border-box;
+  }
+  
+header{
+   height: 330px;
+   background-image: linear-gradient(to bottom, rgba(117, 215, 117, 0.4), rgba(23, 29, 70, 1)),  url("https://images.pexels.com/photos/3319726/pexels-photo-3319726.jpeg?cs=srgb&dl=pexels-rahul-pandit-3319726.jpg&fm=jpg");
+   background-size: 50%;
+  }
+  
+  
+body {
+  background: #171E46;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; 
+  }
+    
+  
+h1 {
+  color:white;
+  position: relative;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 15px;
+  color: #e0e5ec;
+  font-size: 50px;
+  }
+  
+p {
+  font-family: 'Calibri', sans-serif;
+  }
+  
+section {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+  
+.column {
+  flex: 1 1 0;
+  position: relative;
+  padding: 1rem;
+  min-height: 33vh;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all ease-in-out .3s;
+  min-width: calc(33.33% / 2);
+  border-radius: 10px 10px 0 0;
+  }
+  
+  section:nth-of-type(5) .column:first-of-type {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 22px;
+  }
+  
+  section:nth-of-type(6) .column:nth-of-type(2) {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 66px;
+  }
+  
+  .column img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all ease-in-out .5s;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .column::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .green{
+    background-color: #00ff36;
+  }
+  .green img{
+     mix-blend-mode: multiply;
+    -webkit-filter: grayscale(100%) contrast(1.2);
+    filter: grayscale(100%) contrast(1);
+  }
+  
+  .green::after{
+    background-color: #23278a;
+    mix-blend-mode: lighten;
+  }
+  
+  .artist {
+    background: white;
+    border-radius: 10px;
+      width: 220px;
+      height: 330px;
+      margin-right: 20px;
+    margin-bottom: 35px;
+  }
+    
+    .artist__thumbnail {
+      border-radius: 10px 10px 0 0;
+      width: 220px;
+      height: 220px;
+    }
+    
+    .artist__image {
+       border-radius: 10px 10px 0 0;
+    }
+    
+    .artist__label {
+      height: (280px - 220px);
+    }
+  
+  .capital {
+     font-weight: bold;
+     font-size: 15px;
+     color: black;
+     margin-left: 15px;
+     margin-bottom: 0px;
+  }
+  
+  .lorem {
+    color: grey;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-left:15px;
+    margin-bottom: 10px;
+  }
+  
+  hr.rounded {
+    border-top: 2px solid grey;
+    border-radius: 5px;
+  }
+  
+  .tickets{
+    font-size: 10px;
+    color: #32de8c;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  
+  table td {
+      width: 100px;
+      white-space: nowrap;
+      border: none
+  }
+  
+  button {
+    margin-top: 0px;
+    margin-left: 13px;
+  }
+  
+  .custom-btn {
+    width: 105px;
+    height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+  
+  .btn-1 {
+    background: rgb(6,14,131);
+    background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+    border: none;
+  }
+  .btn-1:hover {
+     background: rgb(0,3,255);
+  background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+  }
+  
+  .btn-1:active {
+    top: 2px;
+  }
