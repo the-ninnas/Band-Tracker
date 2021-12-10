@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie Tracker</title>
+    <link rel="stylesheet" href="../css/green.css"></link>
+
+  </head>
+
+<body>
+   
+<header>
+  <br>
+  <h1> Track your favorite artists' tours.</h1>
+  <p style="text-align: center; font-size: 17px; margin-top: 0px; color: #32de8c;"> Check concert dates and tickets for events near Tallinn!</p>
+</header>
+
+    <section>
+        <form action="/singleArtist" method="GET">
+            {{if .}}
+               {{range .}}<div class="artist">
+                <div class="artist__thumbnail">
+                <div class="column green"> <a href="/artist?id={{.ID}}"><img src="{{.Image}}"></a>
+                </div>
+                <div class="artist__label">
+                    <p class="capital">{{.Name}}</p>
+                    <p class="lorem">Lorem ipsum dolor sit amet. </p>
+                    <a href="/artist?id={{.ID}}" class="custom-btn btn-1"><span style="font-size:12px;">BUY TICKET</span></a>
+                  </div> 
+                  </div>
+                  </div>
+               {{end}}
+            {{end }}
+        </form>
+   </section>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
