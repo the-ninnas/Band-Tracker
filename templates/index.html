@@ -23,15 +23,16 @@
             {{if .}}
                {{range .}}<div class="artist">
                 <div class="artist__thumbnail">
-                <div class="column green"> <a href="/artist?id={{.ID}}"><img src="{{.Image}}"></a>
-                </div>
+                <div><a href="/artist?id={{.ID}}"><img class="artist__image" src="{{.Image}}"></a>
+                
                 <div class="artist__label">
                     <p class="capital">{{.Name}}</p>
                     <p class="lorem">Lorem ipsum dolor sit amet. </p>
-                    <a href="/artist?id={{.ID}}" class="custom-btn btn-1"><span style="font-size:12px;">BUY TICKET</span></a>
+                    <div><button class="custom-btn btn-1"><span style="font-size:12px;"><a href="/artist?id={{.ID}}"> BUY TICKET</a></span></button></div>
                   </div> 
                   </div>
                   </div>
+                </div>
                {{end}}
             {{end }}
         </form>
