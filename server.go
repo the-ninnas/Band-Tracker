@@ -14,16 +14,16 @@ func main() {
 	datosdeArtistas()
 	dataRelation()
 
-	fmt.Println("Starting server at port 8080.")
+	fmt.Println("Starting server at port 8081.")
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", home)
 
-	http.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("templates"))))
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
+	mux.Handle("/templates/", http.StripPrefix("/templates/", http.FileServer(http.Dir("templates"))))
+	mux.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 	
 	mux.HandleFunc("/artist", everyArtist)
-	log.Fatal(http.ListenAndServe(":8080", mux))
+	log.Fatal(http.ListenAndServe(":8081", mux))
 
 	
 }
