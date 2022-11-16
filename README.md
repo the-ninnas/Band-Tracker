@@ -6,6 +6,6 @@ My task was html and css design.
 
 This project uses:
 
-# html
-# css
-# golang
+- html
+- css
+- golang
